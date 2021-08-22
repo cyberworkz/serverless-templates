@@ -1,0 +1,31 @@
+service:
+  name: [fill in service name]
+
+plugins:
+  - serverless-webpack
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 128 # optional, in MB, default is 1024
+  timeout: 10 # optional, in seconds, default is 6
+  stage: ${opt:stage, 'dev'}
+  region: eu-west-1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - sqs:ReceiveMessage
+      Resource:
+        - arn:aws:sqs:[aws-region]]:[account]:[queue name]
+
+functions:
+  receiver:
+    handler: handler.receiver
+    events:
+      - sqs: arn:aws:sqs:[aws-region]]:[account]:[queue name]
+
+# custom variables
+custom:
+  stages:
+    - dev
+    - prod
