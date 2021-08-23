@@ -1,24 +1,20 @@
 <!--
 title: 'AWS SQS Standard Example (NodeJS & Typescript)'
 description: 'This example demonstrates how to setup a SQS with Typescript.'
-layout: Doc
-framework: v1
 platform: AWS
-language: nodeJS
-authorLink: 'https://github.com/jmpfrazao'
-authorName: 'Miguel Frazao'
-authorAvatar: 'https://avatars3.githubusercontent.com/u/28927258?s=460&v=4'
+language: TypeScript
+authorLink: 'https://github.com/cyberworkz/serverless-templates'
+authorName: 'Haiko van der Schaaf'
 -->
-# Simple SQS Standard Example
+# Simple Standard Example
 
-This example demonstrates how to setup a SQS Standard and send messages through the message body and attributes.
+TODO
 
 ## Use Cases
-- Decouple message producers from message consumers.
-- This is one way to architect for scale and reliability.
+- TODO
 
 ## Setup
-- sls deploy
+- TODO
 
 ## Usage
 - To print out the logs of the handler sqs handler on the terminal
@@ -26,8 +22,3 @@ This example demonstrates how to setup a SQS Standard and send messages through 
 
 - send a HTTP POST request to the sender lambda with a JSON payload
 
-## MailGun Typescript lib
-https://www.npmjs.com/package/ts-mailgun
-
-## Use inversify for DI
-https://github.com/andrea-lascola/serverless-inversify-example
