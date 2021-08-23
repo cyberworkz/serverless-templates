@@ -1,0 +1,31 @@
+service:
+  name: aws-nodejs-typescript-s3-example
+
+custom:
+  bucket: <your-bucket-name>
+
+plugins:
+  - serverless-webpack
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 128 # optional, in MB, default is 1024
+  timeout: 10 # optional, in seconds, default is 6
+  stage: ${opt:stage, 'dev'}
+  region: [aws-region]
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - s3:*
+      Resource: "*"
+
+functions:
+  receiver:
+    handler: handler.processor
+    events:
+      - s3:
+          bucket: ${self:custom.bucket}
+          event: s3:ObjectCreated:*
+          rules:
+            - suffix: .png
