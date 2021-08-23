@@ -1,2 +1,2 @@
 # serverless-templates
-Templates for the serverless framework. AWS oriented
+Templates for generating Serverless projects. AWS oriented.
