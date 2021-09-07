@@ -1,0 +1,24 @@
+service:
+  name: aws-nodejs-typescript-dynamodb-streams-example
+
+custom:
+  stream_arn: <your-dynamodb-stream-arn>
+
+plugins:
+  - serverless-webpack
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 128 # optional, in MB, default is 1024
+  timeout: 10 # optional, in seconds, default is 6
+  stage: ${opt:stage, 'dev'}
+  region: [aws-region]
+
+functions:
+  receiver:
+    handler: handler.processor
+    events:
+      - stream:
+          type: dynamodb
+          arn: ${custom.stream_arn}
