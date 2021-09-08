@@ -19,11 +19,11 @@ provider:
       Action:
         - sqs:ReceiveMessage
       Resource:
-        - ${custom.sqs}
+        - ${self:custom.sqs}
 
 functions:
   receiver:
     handler: handler.processor
     events:
-      - sqs: ${custom.sqs}
+      - sqs: ${self:custom.sqs}
 

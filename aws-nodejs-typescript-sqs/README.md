@@ -6,7 +6,7 @@ language: TypeScript
 authorLink: 'https://github.com/cyberworkz/serverless-templates'
 authorName: 'Haiko van der Schaaf'
 -->
-# Serverless AWS SQS Example
+# Serverless AWS SQS Template
 
 This serverless template enables you to handle SQS events with AWS Lambda using Serverless and TypeScript.
 
@@ -17,7 +17,7 @@ This serverless template enables you to handle SQS events with AWS Lambda using 
 ## Setup
 1. Install serverless - ```npm install -g serverless```
 2. Use serverless to create a project with template-url. For example
-   ```serverless create --template-url https://github.com/cyberworkz/serverless-templates/aws-nodejs-typescript-sqs --path myService```
+   ```serverless create --template-url https://github.com/cyberworkz/serverless-templates/tree/main/aws-nodejs-typescript-sqs --path myService```
 
 
 ## Usage

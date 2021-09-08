@@ -6,19 +6,18 @@ language: TypeScript
 authorLink: 'https://github.com/cyberworkz/serverless-templates'
 authorName: 'Haiko van der Schaaf'
 -->
-# Simple Standard Example
+# Serverless DynamoDB Streams template
 
-TODO
+This serverless template enables you to handle DynamoDB Stream events with AWS Lambda using Serverless and TypeScript.
 
 ## Use Cases
-- TODO
+- Side effects on INSERT or UPDATE of a DynamoDB record.
+- Audit events.
+- Communicate DynamoDB data changes to other external services. 
 
 ## Setup
-- TODO
+1. Install serverless - ```npm install -g serverless```
+2. Use serverless to create a project with template-url. For example
+   ```serverless create --template-url https://github.com/cyberworkz/serverless-templates/tree/main/aws-nodejs-typescript-dynamodb-streams --path myService```
 
-## Usage
-- To print out the logs of the handler sqs handler on the terminal
-  `sls logs -f handler -t`
-
-- send a HTTP POST request to the sender lambda with a JSON payload
 

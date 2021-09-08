@@ -21,4 +21,4 @@ functions:
     events:
       - stream:
           type: dynamodb
-          arn: ${custom.stream_arn}
+          arn: ${self:custom.stream_arn}
