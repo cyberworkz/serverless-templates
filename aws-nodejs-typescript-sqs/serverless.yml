@@ -1,0 +1,29 @@
+service:
+  name: aws-nodejs-typescript-sqs-example
+
+custom:
+  sqs: <sqs-arn> # set your sqs arn here
+
+plugins:
+  - serverless-webpack
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 128 # optional, in MB, default is 1024
+  timeout: 10 # optional, in seconds, default is 6
+  stage: ${opt:stage, 'dev'}
+  region: [aws-region]
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - sqs:ReceiveMessage
+      Resource:
+        - ${custom.sqs}
+
+functions:
+  receiver:
+    handler: handler.processor
+    events:
+      - sqs: ${custom.sqs}
+

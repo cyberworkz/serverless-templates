@@ -1,0 +1,32 @@
+{
+  "name": "aws-nodejs-typescript-s3-example",
+  "version": "0.0.0",
+  "description": "Serverless example AWS S3 event with TypeScript",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "tslint -p tsconfig.json -c tslint.json",
+    "deploy-dev": "sls deploy --stage dev"
+  },
+  "dependencies": {
+    "@types/lambda-log": "^2.2.0",
+    "aws-lambda": "^0.1.2",
+    "aws-sdk": "^2.859.0",
+    "lambda": "^0.10.3",
+    "log": "^6.0.0",
+    "source-map-support": "^0.5.10"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.72",
+    "@types/node": "^10.17.55",
+    "eslint": "^6.6.0",
+    "serverless-webpack": "^5.2.0",
+    "ts-loader": "^5.3.3",
+    "tslint": "^5.20.0",
+    "tslint-config-airbnb": "^5.11.2",
+    "typescript": "^3.9.9",
+    "webpack": "^4.46.0"
+  },
+  "author": "Haiko van der Schaaf (https://github.com/cyberworkz)",
+  "license": "MIT"
+}
