@@ -1,6 +1,6 @@
 <!--
 title: 'AWS Cloudwatch Example (NodeJS & Typescript)'
-description: 'This example demonstrates how to setup a AWS Lambda Cloudwatch Log event with Typescript.'
+description: 'This template demonstrates how to setup a AWS Lambda Cloudwatch Log event with Typescript.'
 platform: AWS
 language: TypeScript
 authorLink: 'https://github.com/cyberworkz/serverless-templates'
@@ -11,18 +11,12 @@ authorName: 'Haiko van der Schaaf'
 This serverless template enables you to handle Cloudwatch Log events with AWS Lambda using Serverless and TypeScript.
 
 ## Use Cases
-- Use for asynchronous processes.
-- Listen to events from an existing SQS queue
+- Process Cloudwatch logs to trigger on errors or warnings
 
 ## Setup
 1. Install serverless - ```npm install -g serverless```
 2. Use serverless to create a project with template-url. For example
-   ```serverless create --template-url https://github.com/cyberworkz/serverless-templates/tree/main/aws-nodejs-typescript-sqs --path myService```
+   ```serverless create --template-url https://github.com/cyberworkz/serverless-templates/tree/main/aws-nodejs-typescript-cloudwatch-log --path myService```
 
 
-## Usage
-- To print out the logs of the handler sqs handler on the terminal
-  `sls logs -f handler -t`
-
-- send a HTTP POST request to the sender lambda with a JSON payload
 
