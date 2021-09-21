@@ -1,6 +1,6 @@
 <!--
-title: 'AWS SQS Standard Example (NodeJS & Typescript)'
-description: 'This example demonstrates how to setup a SQS with Typescript.'
+title: 'AWS DynamoDB Stream template (NodeJS & Typescript)'
+description: 'This template enables to setup a AWS Lambda for DynamoDB Stream events with Typescript.'
 platform: AWS
 language: TypeScript
 authorLink: 'https://github.com/cyberworkz/serverless-templates'

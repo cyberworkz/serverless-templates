@@ -1,6 +1,6 @@
 <!--
-title: 'AWS SQS Standard Example (NodeJS & Typescript)'
-description: 'This example demonstrates how to setup a SQS with Typescript.'
+title: 'AWS Lambda S3 event template (NodeJS & Typescript)'
+description: 'This template enables to setup AWS Lambda for S3 events with Typescript.'
 platform: AWS
 language: TypeScript
 authorLink: 'https://github.com/cyberworkz/serverless-templates'
