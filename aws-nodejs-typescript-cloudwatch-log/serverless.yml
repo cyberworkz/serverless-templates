@@ -17,7 +17,7 @@ provider:
 
 
 functions:
-  receiver:
+  processor:
     handler: handler.processor
     events:
       - cloudwatchLog:
