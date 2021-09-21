@@ -1,6 +1,6 @@
 <!--
-title: 'AWS DynamoDB Stream template (NodeJS & Typescript)'
-description: 'This template enables to setup a AWS Lambda for DynamoDB Stream events with Typescript.'
+title: 'AWS DynamoDB Streams Template (NodeJS & Typescript)'
+description: 'This template setups an AWS Lmabda with Typescript for DynamoDB streams events.'
 platform: AWS
 language: TypeScript
 authorLink: 'https://github.com/cyberworkz/serverless-templates'
