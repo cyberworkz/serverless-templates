@@ -1,14 +1,14 @@
 <!--
-title: 'AWS Lambda SQS Standard Example (NodeJS & Typescript)'
-description: 'This example demonstrates how to setup a AWS Lambda SQS event with Typescript.'
+title: 'AWS Cloudwatch Example (NodeJS & Typescript)'
+description: 'This example demonstrates how to setup a AWS Lambda Cloudwatch Log event with Typescript.'
 platform: AWS
 language: TypeScript
 authorLink: 'https://github.com/cyberworkz/serverless-templates'
 authorName: 'Haiko van der Schaaf'
 -->
-# Serverless AWS Lambda SQS Template
+# Serverless AWS Lambda Cloudwatch Log Template
 
-This serverless template enables you to handle SQS events with AWS Lambda using Serverless and TypeScript.
+This serverless template enables you to handle Cloudwatch Log events with AWS Lambda using Serverless and TypeScript.
 
 ## Use Cases
 - Use for asynchronous processes.

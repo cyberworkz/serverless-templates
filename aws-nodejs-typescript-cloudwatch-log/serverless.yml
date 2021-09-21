@@ -1,0 +1,25 @@
+service:
+  name: aws-nodejs-typescript-cloudwatch-log-example
+
+custom:
+  logGroup: <logGroup-arn> # set your logGroup arn here
+
+plugins:
+  - serverless-webpack
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 128 # optional, in MB, default is 1024
+  timeout: 10 # optional, in seconds, default is 6
+  stage: ${opt:stage, 'dev'}
+  region: [aws-region]
+
+
+functions:
+  receiver:
+    handler: handler.processor
+    events:
+      - cloudwatchLog:
+      -   ${self:custom.logGroup}
+
