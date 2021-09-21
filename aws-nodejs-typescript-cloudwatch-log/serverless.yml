@@ -20,6 +20,5 @@ functions:
   processor:
     handler: handler.processor
     events:
-      - cloudwatchLog:
-      -   ${self:custom.logGroup}
+      - cloudwatchLog: ${self:custom.logGroup}
 

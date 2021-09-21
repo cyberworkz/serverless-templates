@@ -6,9 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "tslint -p tsconfig.json -c tslint.json",
-    "deploy-dev": "sls deploy --stage dev",
-    "gzip-test-event": "gzip -c test/decoded-log-event.json | openssl base64 > test/gzipped-event.gz",
-    "local-test": "DEBUG=*   sls invoke local -f processor -p test/gzipped-event.gz -l --stage dev"
+    "deploy-dev": "sls deploy --stage dev"
   },
   "dependencies": {
     "@types/lambda-log": "^2.2.0",
