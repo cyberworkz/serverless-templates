@@ -1,8 +1,8 @@
 service:
-  name: aws-nodejs-typescript-sqs-example
+  name: aws-nodejs-typescript-cloudwatch-log-example
 
 custom:
-  sqs: <sqs-arn> # set your sqs arn here
+  logGroup: <logGroup-arn> # set your logGroup arn here
 
 plugins:
   - serverless-webpack
@@ -14,16 +14,11 @@ provider:
   timeout: 10 # optional, in seconds, default is 6
   stage: ${opt:stage, 'dev'}
   region: [aws-region]
-  iamRoleStatements:
-    - Effect: Allow
-      Action:
-        - sqs:ReceiveMessage
-      Resource:
-        - ${self:custom.sqs}
+
 
 functions:
-  receiver:
+  processor:
     handler: handler.processor
     events:
-      - sqs: ${self:custom.sqs}
+      - cloudwatchLog: ${self:custom.logGroup}
 

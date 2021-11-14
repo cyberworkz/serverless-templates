@@ -1,8 +1,8 @@
 service:
-  name: aws-nodejs-typescript-sqs-example
+  name: aws-nodejs-typescript-s3-example
 
 custom:
-  sqs: <sqs-arn> # set your sqs arn here
+  bucket: <your-bucket-name>
 
 plugins:
   - serverless-webpack
@@ -17,13 +17,15 @@ provider:
   iamRoleStatements:
     - Effect: Allow
       Action:
-        - sqs:ReceiveMessage
-      Resource:
-        - ${self:custom.sqs}
+        - s3:*
+      Resource: "*"
 
 functions:
   receiver:
     handler: handler.processor
     events:
-      - sqs: ${self:custom.sqs}
-
+      - s3:
+          bucket: ${self:custom.bucket}
+          event: s3:ObjectCreated:*
+          rules:
+            - suffix: .png

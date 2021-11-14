@@ -1,8 +1,8 @@
 service:
-  name: aws-nodejs-typescript-sqs-example
+  name: aws-nodejs-typescript-dynamodb-streams-example
 
 custom:
-  sqs: <sqs-arn> # set your sqs arn here
+  stream_arn: <your-dynamodb-stream-arn>
 
 plugins:
   - serverless-webpack
@@ -14,16 +14,11 @@ provider:
   timeout: 10 # optional, in seconds, default is 6
   stage: ${opt:stage, 'dev'}
   region: [aws-region]
-  iamRoleStatements:
-    - Effect: Allow
-      Action:
-        - sqs:ReceiveMessage
-      Resource:
-        - ${self:custom.sqs}
 
 functions:
   receiver:
     handler: handler.processor
     events:
-      - sqs: ${self:custom.sqs}
-
+      - stream:
+          type: dynamodb
+          arn: ${self:custom.stream_arn}
