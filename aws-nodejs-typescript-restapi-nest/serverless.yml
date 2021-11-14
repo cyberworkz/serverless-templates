@@ -1,0 +1,62 @@
+service:
+  name: company-service-aws-lambda
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-plugin-optimize
+  - serverless-offline
+  - serverless-stage-manager
+provider:
+  name: aws
+  tracing:
+    apiGateway: true
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'dev'}
+  region: eu-west-1
+  environment:
+    DB_NAME: ${self:custom.DB_NAME.${self:provider.stage}}
+  iamRoleStatements:
+    - ${file(iam/GoodRefzTableIAM.yml):GoodRefzTableIAM}
+  stackTags:
+    Project: "Company Service"
+    deployed_by: "Bitbucket pipelines"
+
+
+package:
+  exclude:
+    - .gitignore
+    - bitbucket-pipelines.yml
+    - README.md
+    - serverless.yml
+    - nest-cli.json
+    - .prettierrc
+    - bench.js
+  excludeDevDependencies: true
+  individually: true
+
+functions:
+  main:
+    handler: src/main.handler
+    events:
+      - http:
+          method: any
+          path: /{proxy+}
+          cors: true
+
+# custom variables
+custom:
+  stages:
+    - dev
+    - test
+    - acc
+    - prod
+  DB_NAME:
+    dev: GoodRefz.TEST
+    acc: GoodRefz.ACC
+    prod: GoodRefz.PROD
+  GoodRefzTable:
+    arn:
+      dev: arn:aws:dynamodb:eu-west-1:184690513648:table/GoodRefz.TEST
+
+
+
