@@ -1,31 +1,28 @@
 {
-  "name": "company_service",
-  "version": "0.1.0",
-  "description": "GoodRefz company service",
-  "author": "Haiko van der Schaaf",
+  "name": "serverless-rest-api-example",
+  "version": "1.0.0",
+  "description": "Serverless REST API service",
+  "author": "cyberworkz",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "format": "prettier --write \"src/**/*.ts\"",
-    "start": "AWS_PROFILE=goodrefz sls offline start",
+    "start": "sls offline start",
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "deploy": "AWS_PROFILE=cyberworkz sls deploy --stage dev"
+    "deploy": "sls deploy --stage dev"
   },
   "dependencies": {
     "@nestjs/common": "^5.4.0",
     "@nestjs/core": "^5.4.0",
     "aws-sdk": "^2.789.0",
     "aws-serverless-express": "^3.3.5",
-    "builder-pattern": "^1.2.4",
-    "ksuid": "^2.0.0",
     "reflect-metadata": "^0.1.12",
     "rimraf": "^2.6.2",
-    "rxjs": "^6.2.2",
-    "typescript-collections": "^1.3.3"
+    "rxjs": "^6.2.2"
   },
   "devDependencies": {
     "@nestjs/testing": "^5.1.0",
