@@ -1,0 +1,37 @@
+service:
+  name: aws-nodejs-typescript-restapi-nest
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-plugin-optimize
+  - serverless-offline
+  - serverless-stage-manager
+provider:
+  name: aws
+  tracing:
+    apiGateway: true
+  runtime: nodejs12.x
+  stage: ${opt:stage, 'dev'}
+  region: eu-west-1
+
+
+package:
+  exclude:
+    - .gitignore
+    - README.md
+    - serverless.yml
+    - nest-cli.json
+    - .prettierrc
+  excludeDevDependencies: true
+  individually: true
+
+functions:
+  main:
+    handler: src/main.handler
+    events:
+      - http:
+          method: any
+          path: /{proxy+}
+          cors: true
+
+
