@@ -1,9 +1,6 @@
 service:
   name: aws-nodejs-typescript-cloudwatch-log-example
 
-custom:
-  logGroup: <logGroup-arn> # set your logGroup arn here
-
 plugins:
   - serverless-webpack
 
@@ -21,4 +18,14 @@ functions:
     handler: handler.processor
     events:
       - cloudwatchLog: ${self:custom.logGroup}
+
+# custom variables
+custom:
+  logGroup: <logGroup-arn> # set your logGroup arn here
+  stages:
+    - dev
+    - test
+    - acc
+    - prod
+
 

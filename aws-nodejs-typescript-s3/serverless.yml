@@ -1,9 +1,6 @@
 service:
   name: aws-nodejs-typescript-s3-example
 
-custom:
-  bucket: <your-bucket-name>
-
 plugins:
   - serverless-webpack
 
@@ -29,3 +26,11 @@ functions:
           event: s3:ObjectCreated:*
           rules:
             - suffix: .png
+
+custom:
+  bucket: <your-bucket-name>
+  stages:
+    - dev
+    - test
+    - acc
+    - prod

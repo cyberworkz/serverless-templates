@@ -1,9 +1,6 @@
 service:
   name: aws-nodejs-typescript-sqs-example
 
-custom:
-  sqs: <sqs-arn> # set your sqs arn here
-
 plugins:
   - serverless-webpack
 
@@ -26,4 +23,12 @@ functions:
     handler: handler.processor
     events:
       - sqs: ${self:custom.sqs}
+
+custom:
+  sqs: <sqs-arn> # set your sqs arn here
+  stages:
+    - dev
+    - test
+    - acc
+    - prod
 
