@@ -34,4 +34,11 @@ functions:
           path: /{proxy+}
           cors: true
 
+custom:
+  stages:
+    - dev
+    - test
+    - acc
+    - prod
+
 

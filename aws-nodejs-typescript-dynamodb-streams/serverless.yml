@@ -1,9 +1,6 @@
 service:
   name: aws-nodejs-typescript-dynamodb-streams-example
 
-custom:
-  stream_arn: <your-dynamodb-stream-arn>
-
 plugins:
   - serverless-webpack
 
@@ -22,3 +19,11 @@ functions:
       - stream:
           type: dynamodb
           arn: ${self:custom.stream_arn}
+
+custom:
+  stream_arn: <your-dynamodb-stream-arn>
+  stages:
+    - dev
+    - test
+    - acc
+    - prod
