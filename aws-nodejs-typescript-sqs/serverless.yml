@@ -1,5 +1,4 @@
-service:
-  name: aws-nodejs-typescript-sqs-example
+service: aws-nodejs-typescript-sqs-example
 
 plugins:
   - serverless-webpack

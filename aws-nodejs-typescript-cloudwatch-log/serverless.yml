@@ -1,5 +1,4 @@
-service:
-  name: aws-nodejs-typescript-cloudwatch-log-example
+service: aws-nodejs-typescript-cloudwatch-log-example
 
 plugins:
   - serverless-webpack

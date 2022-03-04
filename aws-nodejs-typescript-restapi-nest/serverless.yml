@@ -1,5 +1,4 @@
-service:
-  name: aws-nodejs-typescript-restapi-nest
+service: aws-nodejs-typescript-restapi-nest
 
 plugins:
   - serverless-plugin-typescript

@@ -1,5 +1,4 @@
-service:
-  name: aws-nodejs-typescript-s3-example
+service:  aws-nodejs-typescript-s3-example
 
 plugins:
   - serverless-webpack
