@@ -22,4 +22,7 @@ This serverless template enables you to handle S3 events with AWS Lambda using S
 ## Usage
 - To print out the logs of the handler sqs handler on the terminal
   `sls logs -f handler -t`
+  
+## Examples
+See the following article for an example how to apply the template https://medium.com/dev-genius/s3-trigger-serverless-csv-upload-into-dynamodb-8877c770fb32
 
