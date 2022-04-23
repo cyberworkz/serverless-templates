@@ -12,6 +12,7 @@ This serverless template enables you to handle Cloudwatch Log events with AWS La
 
 ## Use Cases
 - Process Cloudwatch logs to trigger on errors or warnings
+- Notify operations on errors b y email or messaging platform
 
 ## Setup
 1. Install serverless - ```npm install -g serverless```
