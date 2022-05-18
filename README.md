@@ -1,4 +1,5 @@
 # serverless-templates
+Templates for generating Serverless projects. AWS oriented.
 [![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
 ![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/sudokar/nx-serverless/blob/master/LICENSE)
@@ -7,7 +8,6 @@
 ![Maintained](https://img.shields.io/maintenance/yes/2022.svg)
 
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-Templates for generating Serverless projects. AWS oriented.
 
 
 How to use 
