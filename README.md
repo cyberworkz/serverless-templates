@@ -1,5 +1,4 @@
 # serverless-templates
-Templates for generating Serverless projects. AWS oriented.
 [![serverless](http://public.serverless.com/badges/v3.svg)](http://www.serverless.com)
 ![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/sudokar/nx-serverless/blob/master/LICENSE)
@@ -8,13 +7,41 @@ Templates for generating Serverless projects. AWS oriented.
 ![Maintained](https://img.shields.io/maintenance/yes/2022.svg)
 
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+---
+Templates for generating Serverless projects. AWS oriented.
 
 
-How to use 
+## How to use 
 1. Install serverless - ```npm install -g serverless```
 2. Use serverless to create a project with template-url. For example
    ```serverless create --template-url https://github.com/cyberworkz/serverless-templates/tree/main/aws-nodejs-typescript-sqs --path myService```
    
 ## Known issues
 Use node 15.3.0 or lower for templates with the serverless-webpack-plugin. A higher node version results in uploading an empty ZIP file. See https://github.com/serverless/serverless/issues/8794 for more info.
+
+## Further help
+
+- Visit [Serverless Documentation](https://www.serverless.com/framework/docs/) to learn more about Serverless framework
+
+## Contribution
+
+Found an issue? feel free to raise an issue with information to reproduce.
+
+Pull requests are welcome to improve.
+
+## Support
+
+Like the templates?
+
+Click to <a href="https://www.buymeacoffee.com/haiko" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="50" width="250"></a>
+
+Or, Add a star :star: to the repository
+
+## Maintainer
+
+This template is authored and maintained by [Haiko van der Schaaf](https://github.com/cyberworkz)
+
+## License
+
+MIT
 
