@@ -1,0 +1,28 @@
+service: aws-java-spring-restapi
+
+plugins:
+  - serverless-offline
+  - serverless-stage-manager
+provider:
+  name: aws
+  runtime: java11
+  stage: ${opt:stage, 'dev'}
+  region: eu-west-1
+
+functions:
+  main:
+    handler: src/main.handler
+    events:
+      - http:
+          method: any
+          path: /{proxy+}
+          cors: true
+
+custom:
+  stages:
+    - dev
+    - test
+    - acc
+    - prod
+
+
