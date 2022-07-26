@@ -7,6 +7,7 @@
 ![Maintained](https://img.shields.io/maintenance/yes/2022.svg)
 
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+<a href="https://twitter.com/DeHaiko"><img alt="Twitter" src="https://img.shields.io/twitter/follow/dehaiko?style=social"></a>
 ---
 Templates for generating Serverless projects. AWS oriented.
 
