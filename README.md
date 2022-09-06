@@ -38,6 +38,10 @@ Click to <a href="https://www.buymeacoffee.com/haiko" target="_blank"><img src="
 
 Or, Add a star :star: to the repository
 
+### Medium ###
+These templates are used in my stories on <a href="https://serverlesscorner.com" target="_blank">Serverlesscorner</a>, a Medium blog. 
+Love ❤️ reading my stories and other ones on Medium? Become a <a href="https://serverlesscorner.com/membership" target="_blank">member</a> if you ain’t already.
+
 ## Maintainer
 
 This template is authored and maintained by [Haiko van der Schaaf](https://github.com/cyberworkz)
