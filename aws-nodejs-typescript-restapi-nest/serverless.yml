@@ -9,7 +9,7 @@ provider:
   name: aws
   tracing:
     apiGateway: true
-  runtime: nodejs12.x
+  runtime: nodejs14.x
   stage: ${opt:stage, 'dev'}
   region: eu-west-1
 
