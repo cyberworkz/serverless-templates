@@ -1,4 +1,4 @@
-service: aws-nodejs-typescript-restapi-nest
+service: aws-nodejs-typescript-restapi-cloudwatch-emf
 
 plugins:
   - serverless-plugin-typescript
@@ -13,6 +13,13 @@ provider:
   stage: ${opt:stage, 'dev'}
   region: eu-west-1
 
+  #---------------------------------------------
+  # Configure EMF Namesspace and service name 
+  # OR  do it in main.ts
+  #---------------------------------------------
+  #environment:
+  #  POWERTOOLS_METRICS_NAMESPACE: [Fill in namespace]
+  #  POWERTOOLS_SERVICE_NAME: [Fill in service name]
 
 package:
   exclude:
@@ -27,6 +34,8 @@ package:
 functions:
   main:
     handler: src/main.handler
+    layers: # AWS Powertools layer for EMF metrics
+      - arn:aws:lambda:eu-west-1:094274105915:layer:AWSLambdaPowertoolsTypeScript:7
     events:
       - http:
           method: any

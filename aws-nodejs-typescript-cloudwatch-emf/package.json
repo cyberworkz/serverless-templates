@@ -26,6 +26,7 @@
     "rxjs": "^6.2.2"
   },
   "devDependencies": {
+    "@aws-lambda-powertools/metrics": "^1.5.1",
     "@nestjs/testing": "^5.1.0",
     "@types/aws-lambda": "^8.10.15",
     "@types/aws-serverless-express": "^3.3.5",
