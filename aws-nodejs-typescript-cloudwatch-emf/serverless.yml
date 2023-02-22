@@ -1,0 +1,52 @@
+service: aws-nodejs-typescript-restapi-cloudwatch-emf
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-plugin-optimize
+  - serverless-offline
+  - serverless-stage-manager
+provider:
+  name: aws
+  tracing:
+    apiGateway: true
+  runtime: nodejs14.x
+  stage: ${opt:stage, 'dev'}
+  region: eu-west-1
+
+  #---------------------------------------------
+  # Configure EMF Namesspace and service name 
+  # OR  do it in main.ts
+  #---------------------------------------------
+  #environment:
+  #  POWERTOOLS_METRICS_NAMESPACE: [Fill in namespace]
+  #  POWERTOOLS_SERVICE_NAME: [Fill in service name]
+
+package:
+  exclude:
+    - .gitignore
+    - README.md
+    - serverless.yml
+    - nest-cli.json
+    - .prettierrc
+  excludeDevDependencies: true
+  individually: true
+
+functions:
+  main:
+    handler: src/main.handler
+    layers: # AWS Powertools layer for EMF metrics
+      - arn:aws:lambda:eu-west-1:094274105915:layer:AWSLambdaPowertoolsTypeScript:7
+    events:
+      - http:
+          method: any
+          path: /{proxy+}
+          cors: true
+
+custom:
+  stages:
+    - dev
+    - test
+    - acc
+    - prod
+
+
