@@ -12,7 +12,7 @@ This serverless template enables you to run a NestJS REST API with AWS Lambda us
 See also, https://awslabs.github.io/aws-lambda-powertools-typescript/latest/core/metrics/
 
 ## Use Cases
-- REST API with metrics.
+- REST API with AWS EMF metrics.
 
 ## Setup
 1. Install serverless - ```npm install -g serverless```
