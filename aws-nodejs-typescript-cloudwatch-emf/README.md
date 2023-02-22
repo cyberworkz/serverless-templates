@@ -8,7 +8,8 @@ authorName: 'Haiko van der Schaaf'
 -->
 # Serverless REST API and Cloudwatch EMF template
 
-This serverless template enables you to run a NestJS REST API with AWS Lambda using Serverless and TypeScript. Furthermore, the template incorporates AWS Powertools using a layer. This allows you to log metrics to AWs EMF.
+This serverless template enables you to run a NestJS REST API with AWS Lambda using Serverless and TypeScript. Furthermore, the template incorporates AWS Powertools using a layer. This allows you to log metrics to AWS EMF.
+See also, https://awslabs.github.io/aws-lambda-powertools-typescript/latest/core/metrics/
 
 ## Use Cases
 - REST API with metrics.
