@@ -9,7 +9,7 @@ provider:
   name: aws
   tracing:
     apiGateway: true
-  runtime: nodejs16.x
+  runtime: nodejs18.x
   memorySize: 128 # optional, in MB, default is 1024
   reservedConcurrency: 5 # default, change according to your needs
   stage: ${opt:stage, 'dev'}
