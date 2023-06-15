@@ -15,6 +15,7 @@ provider:
 functions:
   processor:
     handler: handler.processor
+    reservedConcurrency: 5 # default, change according to your needs
     events:
       - cloudwatchLog: ${self:custom.logGroup}
 
