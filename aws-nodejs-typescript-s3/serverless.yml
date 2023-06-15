@@ -19,6 +19,7 @@ provider:
 functions:
   receiver:
     handler: handler.processor
+    reservedConcurrency: 5 # default, change according to your needs
     events:
       - s3:
           bucket: ${self:custom.bucket}
