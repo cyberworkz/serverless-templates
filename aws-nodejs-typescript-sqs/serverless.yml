@@ -20,6 +20,7 @@ provider:
 functions:
   receiver:
     handler: handler.processor
+    reservedConcurrency: 5 # default, change according to your needs
     events:
       - sqs: ${self:custom.sqs}
 
