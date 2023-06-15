@@ -4,7 +4,7 @@
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/sudokar/nx-serverless/blob/master/LICENSE)
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/Naereen/badges.svg)](http://isitmaintained.com/project/Naereen/badges 'Percentage of issues still open')
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/sudokar/nx-serverless)
-![Maintained](https://img.shields.io/maintenance/yes/2022.svg)
+![Maintained](https://img.shields.io/maintenance/yes/2023.svg)
 
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 <a href="https://twitter.com/DeHaiko"><img alt="Twitter" src="https://img.shields.io/twitter/follow/dehaiko?style=social"></a>
