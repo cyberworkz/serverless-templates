@@ -14,7 +14,9 @@
     "aws-sdk": "^2.859.0",
     "lambda": "^0.10.3",
     "log": "^6.0.0",
-    "source-map-support": "^0.5.10"
+    "source-map-support": "^0.5.10",
+    "reflect-metadata": "^0.1.13",
+    "typedi": "^0.10.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.72",
