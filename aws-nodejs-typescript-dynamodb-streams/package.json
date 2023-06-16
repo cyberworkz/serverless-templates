@@ -17,6 +17,8 @@
     "source-map-support": "^0.5.10"
   },
   "devDependencies": {
+    "serverless-prune-plugin": "^2.0.1",
+    "serverless-stage-manager": "^1.0.5",
     "@types/aws-lambda": "^8.10.72",
     "@types/node": "^10.17.55",
     "eslint": "^6.6.0",
