@@ -31,3 +31,6 @@ custom:
     - test
     - acc
     - prod
+  prune:
+    automatic: true
+    number: 3
