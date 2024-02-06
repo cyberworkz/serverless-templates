@@ -13,6 +13,8 @@ provider:
   memorySize: 128 # optional, in MB, default is 1024
   stage: ${opt:stage, 'dev'}
   region: eu-west-1
+  # Valid values: https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-loggroup.html
+  logRetentionInDays: 365
 
 
 package:
@@ -30,7 +32,7 @@ functions:
     handler: src/main.handler
     reservedConcurrency: 5 # default, change according to your needs
     layers: # AWS Powertools layer for EMF metrics
-      - arn:aws:lambda:eu-west-1:094274105915:layer:AWSLambdaPowertoolsTypeScript:7
+      - arn:aws:lambda:eu-west-1:094274105915:layer:AWSLambdaPowertoolsTypeScript:28
     events:
       - http:
           method: any
