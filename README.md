@@ -7,7 +7,7 @@
 ![Maintained](https://img.shields.io/maintenance/yes/2023.svg)
 
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-<a href="[https://twitter.com/DeHaiko](https://bsky.app/profile/serverlesscorner.com)">🦋</a>
+<a href="[https://bsky.app/profile/serverlesscorner.com]">🦋</a>
 ---
 Templates for generating Serverless projects. AWS oriented.
 
