@@ -7,7 +7,7 @@
 ![Maintained](https://img.shields.io/maintenance/yes/2023.svg)
 
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![Follow me on Bluesky](https://img.shields.io/badge/Bluesky-0285FF?logo=bluesky&logoColor=fff&label=Follow%20me%20on&color=0285FF)(https://bsky.app/profile/serverlesscorner.com
+[![Follow me on Bluesky](https://img.shields.io/badge/Bluesky-0285FF?logo=bluesky&logoColor=fff&label=Follow%20me%20on&color=0285FF)]([https://www.nisrulz.com](https://bsky.app/profile/serverlesscorner.com))
 ---
 Templates for generating Serverless projects. AWS oriented.
 
