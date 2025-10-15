@@ -13,8 +13,8 @@ Templates for generating Serverless projects. AWS oriented.
 
 
 ## How to use 
-1. Install serverless - ```npm install -g serverless```
-2. Use serverless to create a project with template-url. For example
+1. Install oss-serverless  ```npm install -g osls```
+2. Use oss-serverless to create a project with template-url. For example
    ```serverless create --template-url https://github.com/cyberworkz/serverless-templates/tree/main/aws-nodejs-typescript-sqs --path myService```
    
 ## Known issues
@@ -22,7 +22,7 @@ Use node 15.3.0 or lower for templates with the serverless-webpack-plugin. A hig
 
 ## Further help
 
-- Visit [Serverless Documentation](https://www.serverless.com/framework/docs/) to learn more about Serverless framework
+- Visit [Serverless Documentation]([)](https://github.com/oss-serverless/serverless/tree/main/docs) to learn more about the open source alternative Serverless framework
 
 ## Contribution
 
